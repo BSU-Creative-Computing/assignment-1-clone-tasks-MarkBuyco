@@ -1,0 +1,75 @@
+/*Logo styling, making it smaller, and adding different margins and  padding.*/
+.logo{
+    margin-left: 10px;
+    margin-top: 10px;
+    height:50px;
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+/* Choosing of the font to be used in the whole webpage.*/
+body{
+    font-family: monospace;
+}
+
+/* To have no extra white spaces.*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Paragraph styling, a padding is added.*/
+#Lorem{
+    padding: 10px;
+}
+
+/* Footer styling, using background color, colors, align, and other formatting options.*/
+footer{
+    text-align: center;
+    background-color:rgb(18, 21, 27) ;
+    color: white;
+    margin-top: 10px;
+    padding-top: 20px;
+    height: 2rem;
+}
+
+/* Media query, when the screen in 480px or more.*/
+@media screen and (min-width:480px){
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Media query, when the screen in 800px or more.*/
+@media screen and (min-width:800px){
+    img{
+        display: inline;
+        width: 396px;
+    }
+}
+
+/* Media query, when the screen in 1024px.*/
+@media screen and (min-width:1024px){
+    img{
+        display: inline;
+        width: 341.3px;
+    }
+}
+
+/* Media query, when the screen in more than 1024px.*/
+@media screen and (min-width:1025px){
+    .img{
+        width: 230px;
+        display: inline;
+    }
+
+    body{
+        margin: 5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 5rem;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

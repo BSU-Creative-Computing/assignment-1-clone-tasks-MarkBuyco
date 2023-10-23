@@ -1,0 +1,127 @@
+/*CSS hack to avoid any additional white spaces.*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Header styling, has flex elements, like align-items.*/
+header{
+    background-color: #2196F3;
+    display: flex;
+    color: white; 
+    padding: 15px;
+    height: 35px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Removing link styling, and making look natural.*/
+a{
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+}
+
+/*Body font.*/
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+}
+
+/*Heading styling*/
+h1{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+/*Searchbar styling using only width and padding.*/
+input[type=text]{
+    width: 15rem;
+    padding: 15px;
+}
+
+/*Container div, using flex, wrap, and row.*/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left:  250px ;   
+    padding-top: 15px;
+}
+
+/*Styling the the big box, which is the Avengers div.*/
+.big-box{
+    height: 650px;
+    width: 510px;
+    border: 1px solid rgba(167, 167, 167, 0.233);
+    box-shadow: 1px 1px #8888884f;
+    margin-right: 5px;
+}
+
+/*Paragraph styling.*/
+p{
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: rgb(88, 87, 87);
+}
+
+/*Styling the the small box, which is all the divs except the Avengers div..*/
+.small-box{
+    width: 150px;
+    height: 460px;
+    border: 1px solid rgba(167, 167, 167, 0.233);
+    box-shadow: 1px 1px #8888884f;
+    margin-right: 5px;
+    padding-top: 10px;
+}
+
+/*Stylingt the big image.*/
+.big-img{
+    height: 470px;
+}
+
+/*Styling the small images.*/
+.small-img{
+    height: 200px;
+}
+
+/*Heading 2 styling.*/
+h2{
+    font-size:medium;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 5px ;
+}
+
+/*Button styling*/
+button{
+    font-size: 10px;
+    background-color: #2196F3; 
+    border: none;
+    padding: 7px;
+    color: white;
+    border-radius: 4px;
+    float:right;
+    margin-right: 25px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+/*Nested div styling, these are the 2 movies below, almost the same styling as the small box.*/
+.column{
+    margin-top: 150px;
+    width: 150px;
+    height: 450px;
+    border: 1px solid rgba(167, 167, 167, 0.233);
+    box-shadow: 1px 1px #8888884f;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+  

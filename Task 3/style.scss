@@ -1,0 +1,160 @@
+$color1: #4e89ae;
+$color2: #43658b;
+$color3: #ed6663;
+$color4: #ffa372;
+$color5: #8ccff7;
+
+.Rec1{
+    background-color: $color1;
+    height: 40px;
+    width:100%;
+}
+
+.Rec2{
+    @extend .Rec1;
+    background-color: $color2;
+}
+
+.Rec3{
+    @extend .Rec1;
+    background-color: $color3;
+}
+
+.Rec4{
+    @extend .Rec1;
+    background-color: $color4;
+}
+
+
+.C1{
+    background-color: $color1;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.C2{
+    @extend .C1;
+    background-color: $color2;
+    height: 80px;
+    width: 80px;
+}
+
+.C3{
+    @extend .C1;
+    background-color: $color3;
+    height: 90px;
+    width: 90px;
+}
+
+.C4{
+    @extend .C1;
+    background-color: $color4;
+    height: 100px;
+    width: 100px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header, footer{
+    background-color: $color5;
+}
+
+header{
+    height: 400px;
+}
+
+footer{
+    height: 50px;
+    margin-top: 60px;
+}
+
+
+body{
+    background-color:rgb(220, 245, 255);
+    text-align: center;
+}
+
+.Rec1:hover, .Rec2:hover, .Rec3:hover, .Rec4:hover, .C1:hover, .C2:hover, .C3:hover, .C4:hover{
+    background-color: #444;
+}
+
+
+.rectangle{
+padding-top: 50px;
+}
+
+.circle{
+    margin-top: 55px;
+}
+
+@media screen and (min-width:1024px){
+    .C1{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+}
+
+
+@media screen and (max-width:620px){
+    header{
+        height: 300px;
+    }
+    
+    .C1{
+        margin-left: 280px;
+        margin-bottom: 8px;
+    }
+
+    .C2{
+        margin-left: 275px;
+    }
+
+    .C3{
+        margin-left: 270px;
+    }
+
+    .C4 {
+        margin-left: 265px;
+    }
+    
+}
+
+@media screen and (max-width:480px){
+    header{
+        height: 200px;
+        background-image: image("200.png");
+    }
+
+    .Rec1{
+        height: 45px;
+        width:100%;
+    }
+
+    .C1{
+        margin-left: 210px;
+        margin-bottom: 8px;
+    }
+
+    .C2{
+        margin-left: 205px;
+    }
+
+    .C3{
+        margin-left: 200px;
+    }
+
+    .C4 {
+        margin-left: 195px;
+    }
+
+    footer{
+        margin-top: 150px;
+    }
+    
+}

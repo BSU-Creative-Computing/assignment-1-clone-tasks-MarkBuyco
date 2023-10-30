@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clone Task 3</title>
+    <title>Task 3</title>
     <link rel="stylesheet" type="text/css" href="style.css" /> 
 </head>
 <body>
+    <!--Header, which contains has the picture elements so the picture would be responsive
+    depending on the screen size.-->
     <header> 
-        <div class="image">
-            <picture>
-            <source srcset="200.png" media="(max-width:480px)">
-            <source srcset="300.png" media="(max-width:620px)">
-
-            <img src="400.png"> 
+            <picture> <!--Picuture element with different media query for specific window. -->
+                <source srcset="200.png" media="(min-width:480px) and (max-width:619px)" >
+                <source srcset="300.png" media="(min-width:620px) and (max-width:1023px)" >
+                <source srcset="200.png" media="(max-width:479px)" >
+                <img src="400.png"> 
             </picture>
-        </div> 
     </header>
     
     <main>
+        <!--Div containing 4 rectangles. -->
         <div class="rectangle">
             <div class="Rec1"></div>
             <div class="Rec2"></div>
@@ -26,15 +27,16 @@
             <div class="Rec4"></div>
         </div>
 
-        <div class="circle"></div>
+        <!--Dive containing 4 circles. -->
+        <div class="circle">
             <div class="C1"></div>
             <div class="C2"></div>
             <div class="C3"></div>
-            <div class="C4"> </div>
+            <div class="C4"></div>
         </div>
     </main>
 
-    <footer></footer>
+    <footer></footer> <!--Footer-->
     
 </body>
 </html>

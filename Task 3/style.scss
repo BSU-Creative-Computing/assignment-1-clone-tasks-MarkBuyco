@@ -1,31 +1,44 @@
+/*Remove extra white spaces.*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Variables, using different colors used in code.*/
 $color1: #4e89ae;
 $color2: #43658b;
 $color3: #ed6663;
 $color4: #ffa372;
 $color5: #8ccff7;
 
-.Rec1{
-    background-color: $color1;
+/*Mixin property, with background color as a parameter.*/
+@mixin Rectangles($bg-color) {
+    background-color: $bg-color;
     height: 40px;
     width:100%;
 }
 
+/*Including mixin property using include, and adding a color.*/
+.Rec1{
+    @include Rectangles($color1)
+}
+
+/*Second rectangle, different color*/
 .Rec2{
-    @extend .Rec1;
-    background-color: $color2;
+    @include Rectangles($color2)
 }
 
+/*Third rectangle, different color*/
 .Rec3{
-    @extend .Rec1;
-    background-color: $color3;
+    @include Rectangles($color3)
 }
 
+/*Fourth rectangle, different color*/
 .Rec4{
-    @extend .Rec1;
-    background-color: $color4;
+    @include Rectangles($color4)
 }
 
-
+/*Circle styling, color, height, width, and border raduis to 50% to make it circle.*/
 .C1{
     background-color: $color1;
     height: 70px;
@@ -33,6 +46,7 @@ $color5: #8ccff7;
     border-radius: 50%;
 }
 
+/*Second circle, different color, height, and width.*/
 .C2{
     @extend .C1;
     background-color: $color2;
@@ -40,6 +54,7 @@ $color5: #8ccff7;
     width: 80px;
 }
 
+/*Third circle, different color, height, and width.*/
 .C3{
     @extend .C1;
     background-color: $color3;
@@ -47,6 +62,7 @@ $color5: #8ccff7;
     width: 90px;
 }
 
+/*Fourth circle, different color, height, and width.*/
 .C4{
     @extend .C1;
     background-color: $color4;
@@ -54,107 +70,105 @@ $color5: #8ccff7;
     width: 100px;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-}
-
+/*Adding the 5th color to header and footer.*/
 header, footer{
     background-color: $color5;
 }
 
-header{
-    height: 400px;
-}
-
+/*Footer height and margin.*/
 footer{
     height: 50px;
     margin-top: 60px;
 }
 
-
+/*Body color.*/
 body{
     background-color:rgb(220, 245, 255);
     text-align: center;
 }
 
-.Rec1:hover, .Rec2:hover, .Rec3:hover, .Rec4:hover, .C1:hover, .C2:hover, .C3:hover, .C4:hover{
+/*Hover color on rectangle and circles.*/
+.Rec1:hover, .Rec2:hover, .Rec3:hover, .Rec4:hover, 
+.C1:hover, .C2:hover, .C3:hover, .C4:hover{
     background-color: #444;
 }
 
-
+/*Padding on the rectangles.*/
 .rectangle{
 padding-top: 50px;
 }
 
+/*Padding on the circles.*/
 .circle{
     margin-top: 55px;
 }
 
+/*Media query, when the screen is 480px to 619px.*/
+@media screen and (min-width:480px) and (max-width:619px) {
+    header{ /*Changing the height of the header.*/
+        height: 200px;
+    }
+
+    .circle{ /*Displaying the circles in a column and center align using flex.*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .C1{ /*Adding a margin to the circles.*/
+        margin-bottom: 8px;
+    }
+}
+
+/*Media query, when the screen is 620px to 1023px.*/
+@media screen and (min-width:620px) and (max-width:1023px){
+    header{ /*Changing the height of the header.*/
+        height: 300px;
+    }
+
+    .circle{ /*Displaying the circles in a column and center align using flex.*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .C1{ /*Adding a margin to the circles.*/
+        margin-bottom: 8px;
+    }
+}
+
+/*Media query, when the screen is 1024px or above.*/
 @media screen and (min-width:1024px){
-    .C1{
-        display: inline-block;
+    header{ /*Changing the height of the header.*/
+        height: 400px;
+    }
+    .C1{ /*Display circles inline and centered.*/
+        display: inline-block; 
         vertical-align: middle;
         margin-right: 5px;
     }
-
 }
 
-
-@media screen and (max-width:620px){
-    header{
-        height: 300px;
-    }
-    
-    .C1{
-        margin-left: 280px;
-        margin-bottom: 8px;
-    }
-
-    .C2{
-        margin-left: 275px;
-    }
-
-    .C3{
-        margin-left: 270px;
-    }
-
-    .C4 {
-        margin-left: 265px;
-    }
-    
-}
-
-@media screen and (max-width:480px){
-    header{
+/*Media query, when the screen is below 479px.*/
+@media screen and (max-width:479px){
+    header{ /*Changing the height of the header.*/
         height: 200px;
-        background-image: image("200.png");
     }
 
-    .Rec1{
-        height: 45px;
-        width:100%;
+    .circle{ /*Displaying the circles in a column and center align using flex.*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 
-    .C1{
-        margin-left: 210px;
+    .C1{ /*Adding a margin to the circles.*/
         margin-bottom: 8px;
     }
-
-    .C2{
-        margin-left: 205px;
-    }
-
-    .C3{
-        margin-left: 200px;
-    }
-
-    .C4 {
-        margin-left: 195px;
-    }
-
-    footer{
-        margin-top: 150px;
-    }
-    
 }
+
+
+
+

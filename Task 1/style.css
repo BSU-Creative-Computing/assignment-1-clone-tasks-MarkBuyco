@@ -1,3 +1,9 @@
+/* To have no extra white spaces.*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
 /*Logo styling, making it smaller, and adding different margins and  padding.*/
 .logo{
     margin-left: 10px;
@@ -10,12 +16,6 @@
 /* Choosing of the font to be used in the whole webpage.*/
 body{
     font-family: monospace;
-}
-
-/* To have no extra white spaces.*/
-*{
-    margin: 0;
-    padding: 0;
 }
 
 /* Paragraph styling, a padding is added.*/
@@ -44,24 +44,24 @@ footer{
 /* Media query, when the screen in 800px or more.*/
 @media screen and (min-width:800px){
     img{
-        display: inline;
-        width: 396px;
+        width: 50%;
+        height: auto;
     }
 }
 
 /* Media query, when the screen in 1024px.*/
 @media screen and (min-width:1024px){
     img{
-        display: inline;
-        width: 341.3px;
+        width: 33.33%;
+        height: auto;
     }
 }
 
 /* Media query, when the screen in more than 1024px.*/
 @media screen and (min-width:1025px){
     .img{
-        width: 230px;
-        display: inline;
+        width: 33.33%;
+        height: auto;
     }
 
     body{
@@ -72,4 +72,5 @@ footer{
         padding-top: 0;
         padding-bottom: 0;
     }
+
 }

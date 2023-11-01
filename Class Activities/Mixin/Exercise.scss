@@ -1,0 +1,36 @@
+$default-color: #acc0e0;
+
+.default-div{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $default-color;
+}
+
+.adjusted-div{
+    @extend .default-div;
+    background-color: lighten($default-color, 10%); //lighten color
+}
+
+.adjusted-div-2{
+    @extend .default-div;
+    background-color: saturate($default-color, 100%); //SAturate
+}
+
+.adjusted-div-3{
+    @extend .default-div;
+    background-color: grayscale($default-color); //no value needed
+}
+
+.adjusted-div-4{
+    @extend .default-div;
+    background-color: complement($default-color); //opossite color wheel
+}
+
+.adjusted-div-5{
+    @extend .default-div;
+    background-color: invert($default-color, 100%); //inverse color
+}

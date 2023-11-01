@@ -1,0 +1,19 @@
+section{
+    width: 50%;
+    float: left;
+    min-width: 375px;
+}
+
+#box1 {
+    background-color: yellow;
+}
+
+#box2 {
+    background-color: rgb(255, 0, 0);
+}
+
+@media screen and (max-width:600px) {
+    section{
+        width: 100%;
+    }
+}

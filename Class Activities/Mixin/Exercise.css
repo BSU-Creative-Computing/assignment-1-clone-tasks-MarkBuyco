@@ -1,0 +1,29 @@
+.default-div, .adjusted-div-5, .adjusted-div-4, .adjusted-div-3, .adjusted-div-2, .adjusted-div {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #acc0e0;
+}
+
+.adjusted-div {
+  background-color: #d1dcee;
+}
+
+.adjusted-div-2 {
+  background-color: #8db9ff;
+}
+
+.adjusted-div-3 {
+  background-color: #c6c6c6;
+}
+
+.adjusted-div-4 {
+  background-color: #e0ccac;
+}
+
+.adjusted-div-5 {
+  background-color: #533f1f;
+}/*# sourceMappingURL=Exercise.css.map */

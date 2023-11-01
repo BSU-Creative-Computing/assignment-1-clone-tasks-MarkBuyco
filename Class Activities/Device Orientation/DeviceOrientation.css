@@ -1,0 +1,26 @@
+@media screen and (max-width:900px) and (orientation:portrait){
+    body {
+        width: 100vw;
+        margin: 0;
+    }
+
+    #Banner{
+        height: 100px;
+        background-color: #aaceff;
+    }
+}
+
+/*Landscape*/
+@media screen and (max-width:900px) and (orientation:landscape) {
+    body{
+        width: 100vw;
+        margin: 0;
+    }
+
+    #Banner{
+        height: 100px;
+        background-color: #d40b0b;
+    }
+
+}
+

@@ -1,0 +1,18 @@
+@mixin breakpoint($minwidth, $maxwidth){ 
+    @media screen and (min-width: $minwidth) and (max-width: $maxwidth) {
+    @content;    
+    }
+}
+
+$colors: #ffa3a3 #a4ffa9 #a5c7ff;
+
+div{
+    height: 200px;
+    background-color: nth($colors,1);
+    @include breakpoint(500px, 700px ){
+        background-color: nth($list: $colors, $n: 2 );
+    }
+    @include breakpoint(700px, 900px ){
+        background-color: nth($list: $colors, $n: 3 );
+    }
+}

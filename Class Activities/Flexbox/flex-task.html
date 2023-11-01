@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Flexbox Task</title>
+</head>
+
+<body>
+    <section>
+    <article>
+        <p>I am small</p>
+    </article>
+
+    <article>
+        <p>I have more content than the very small item.</p>
+    </article>
+
+    <article>
+        <p>I have lots of content. So much content that I don't know where it is all going to go.
+            I'm glad that CSS is pretty good at dealing with situations where we end up with more words
+            than expected.
+        </p>
+    </article>
+    </section>
+
+    <style>
+        body{
+            margin: 0;
+            margin-left: 3.5rem;
+        }
+
+        article{
+            padding: 10px;
+            margin: 1px;
+            background-color:cornflowerblue;
+            width: 30%;
+            border-radius: 10px;
+            height: 15rem;
+        }
+        
+        section{
+            display: flex;
+            flex-flow: row wrap ;
+        }
+
+        p{
+            color: white;
+            font-size: larger;
+        }
+    </style>
+
+</body>
+</html>

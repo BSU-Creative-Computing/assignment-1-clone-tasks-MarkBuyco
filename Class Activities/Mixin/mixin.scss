@@ -1,0 +1,21 @@
+@mixin button-styles($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.primary-button {
+    @include button-styles(#3498db, #ffffff)
+}
+
+.secondary-button {
+    @include button-styles(red, #ffffff)
+}
+
+.warning-button {
+    @include button-styles(rgb(0, 255, 64), -#000000)
+}

@@ -1,0 +1,12 @@
+$fontfamily: Helvetica, sans-serif;
+$textsize: 20px;
+$bgcolor: green;
+
+h1{
+    font-size: $textsize;
+    background-color: $bgcolor;
+}
+
+p{
+    background-color: $bgcolor;
+}

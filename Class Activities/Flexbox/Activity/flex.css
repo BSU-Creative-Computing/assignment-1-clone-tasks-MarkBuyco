@@ -1,0 +1,39 @@
+.container{
+    background-color: blueviolet;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.item{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    margin: 20px;
+    background-color: bisque;
+    flex-basis: 150px;
+}
+
+.item1{
+    align-self: center;
+    flex-grow: 1;
+}
+
+.item2{
+    align-self: center;
+}
+
+.item3{
+    align-self: center;
+    flex-grow: 2;
+    flex-shrink: 2;
+}
+
+.item4{
+    align-self: center;
+}
+
+.item5{
+    align-self: center;
+    flex-shrink: 5;
+}

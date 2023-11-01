@@ -1,0 +1,22 @@
+$roundess: 0px 10px 20px 30px 40px 50px;
+$colors: red green blue yellow purple;
+
+.img1{
+    border: 3px solid nth($list: $colors,$n: 4);
+    border-radius: nth($list: $roundess,$n: 2);
+}
+
+.img2{
+    border: 3px solid nth($list: $colors, $n: 4 );
+    border-radius: nth($list: $roundess, $n: 4);
+}
+
+.img3{
+    border: 3px solid nth($list: $colors, $n: 3);
+    border-radius: nth($list: $roundess, $n: 5);
+}
+
+.img4{
+    border: 3px solid nth($list: $colors, $n: 5);   
+    border-radius: nth($list: $roundess, $n: 6);
+}

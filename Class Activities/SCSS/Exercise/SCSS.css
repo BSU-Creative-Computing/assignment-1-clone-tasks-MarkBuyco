@@ -1,0 +1,23 @@
+h1, p, footer {
+  font-family: Helvetica, sans-serif;
+  font-size: 25px;
+  background-color: yellow;
+}
+
+p {
+  background-color: red;
+}
+
+.foot {
+  background-color: green;
+}
+
+ul {
+  list-style: none;
+  display: block;
+  font-size: 25px;
+}
+
+li {
+  display: inline;
+}/*# sourceMappingURL=SCSS.css.map */

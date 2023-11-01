@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+</head>
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+
+    <main>
+        <section class="aside">
+            <h2>Aside 1</h2>
+            <p>This is the first aside.</p>
+        </section>
+
+        <section class="article">
+            <h2>Artice</h2>
+            <p>This is the main article section.</p>
+        </section>
+
+        <section>
+            <h2>Aside 2</h2>
+            <p>This is the second aside.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+    <style>
+        body{
+            font-family: arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+        }
+
+        header,footer{
+            background-color: thistle;
+            padding: 20px;
+        }
+
+        main{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        section{
+            padding: 20px;
+            background-color: cornsilk;
+            border: 1px solid #ddd;
+        }
+
+        @media (max-width: 768px){
+            main{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

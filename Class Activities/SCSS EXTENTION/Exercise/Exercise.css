@@ -1,0 +1,34 @@
+.smallest-div, .biggest-div, .big-div, .medium-div, .small-div {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: grey;
+  color: white;
+}
+
+.small-div {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+.medium-div {
+  background-color: blue;
+  width: 150px;
+  height: 150px;
+}
+
+.big-div {
+  background-color: green;
+  width: 200px;
+  height: 200px;
+}
+
+.biggest-div {
+  background-color: pink;
+  width: 250px;
+  height: 250px;
+}/*# sourceMappingURL=Exercise.css.map */

@@ -25,6 +25,7 @@ a{
 /*Body font.*/
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    background-color: rgba(197, 196, 196, 0.527);
 }
 
 /*Heading styling*/
@@ -39,22 +40,9 @@ input[type=text]{
     padding: 15px;
 }
 
-/*Container div, using flex, wrap, and row.*/
+/*Container padding.*/
 .container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left:  250px ;   
-    padding-top: 15px;
-}
-
-/*Styling the the big box, which is the Avengers div.*/
-.big-box{
-    height: 650px;
-    width: 510px;
-    border: 1px solid rgba(167, 167, 167, 0.233);
-    box-shadow: 1px 1px #8888884f;
-    margin-right: 5px;
+    padding: 10px;
 }
 
 /*Paragraph styling.*/
@@ -63,26 +51,6 @@ p{
     padding-left: 5px;
     padding-right: 5px;
     color: rgb(88, 87, 87);
-}
-
-/*Styling the the small box, which is all the divs except the Avengers div..*/
-.small-box{
-    width: 150px;
-    height: 460px;
-    border: 1px solid rgba(167, 167, 167, 0.233);
-    box-shadow: 1px 1px #8888884f;
-    margin-right: 5px;
-    padding-top: 10px;
-}
-
-/*Stylingt the big image.*/
-.big-img{
-    height: 470px;
-}
-
-/*Styling the small images.*/
-.small-img{
-    height: 200px;
 }
 
 /*Heading 2 styling.*/
@@ -101,27 +69,129 @@ button{
     padding: 7px;
     color: white;
     border-radius: 4px;
-    float:right;
-    margin-right: 25px;
-    margin-top: 30px;
-    margin-bottom: 100px;
+    float: right;
+    margin-top: 5px;
+    
 }
 
-/*Nested div styling, these are the 2 movies below, almost the same styling as the small box.*/
-.column{
-    margin-top: 150px;
-    width: 150px;
-    height: 450px;
+/*Adding border to the divs.*/
+.big-box, .small-box {
     border: 1px solid rgba(167, 167, 167, 0.233);
     box-shadow: 1px 1px #8888884f;
-    padding-top: 10px;
+    background-color: white;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    padding-bottom: 3rem ;
 }
 
+/*For image to fit to the screen.*/
+img{
+    width: 100%;
+}
 
+/*Footer styling, alignment and margins.*/
+.footer{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
 
+/*When screen is below 800px, this will also target 480px, which is the required target.*/
+@media screen and (max-width:799px){
+    /*Removing searchbar for smaller screens.*/
+    input[type=text]{
+        display: none;
+    }
+}
 
+/*When the screen is atleast 800px.*/
+@media screen and (min-width:800px){
+    /*Display flex with wrap.*/
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
 
+    /*Giving the big div a width*/
+    .big-box{
+        width: 100%;
+    }
 
+    /*The small boxes with its width and margin.*/
+    .small-box{
+        width: 44.5%;
+        margin-right: 1rem;
+    }
+}
 
+/*When screen is atleast 1024px*/
+@media screen and (min-width:1024px){
+    /*Adding a flex direction.*/
+    .container{
+        flex-direction: column;
+    }
 
-  
+    /*Lessen the width of the big div.*/
+    .big-box{
+        width: 61%;
+    }
+
+    /*Lessen the width of small divs, plus alignment*/
+    .small-box{
+        width: 30%;
+        align-self: flex-end;
+        margin-right: 10px;
+        transform: translate(0, -124%); /*To adjust small boxes manually to align to the big div.*/
+    }
+
+    /*Adding margin to the footer, because transform disrupted the the margin of the footer that was set.*/
+    .footer{
+        margin-top: -45rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/*When screen is at least 1150px, which also targets 1280px.*/
+@media screen and (min-width:1150px){
+    /*Change flex direction to row.*/
+    .container{
+        flex-direction: row;
+    }
+
+    /*Reducing size of div and adding margin for alignment.*/
+    .big-box{
+        width: 46%;
+        margin-right: 10px;
+    }
+
+    /*Reducing size of small divs*/
+    .small-box{
+        width: 21%;
+        align-self:normal; /*Aligning self to normal, from flex-end*/
+        margin-right: 10px;
+        transform: translate(0, 0); /*Removing transform translate from the the last media query.*/
+        height: 100%;
+    }
+
+    /*Adjusting the columns manually.*/
+    #down{
+        transform: translate(209%, 0);
+        margin-top: -13.7%;
+    }
+
+    /*Putting back the footer styling to normal.*/
+    .footer{
+        margin-top: 0px;
+        margin-bottom: 1rem;
+    }
+}
+
+/*When the screen is more than 1280*/
+@media screen and (min-width:1281px){
+    /*Just added padding to left and right.*/
+    .container{
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+}
+
